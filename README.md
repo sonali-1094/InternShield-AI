@@ -23,7 +23,9 @@ An AI-powered tool to detect internship scams and find legitimate opportunities.
 2. **Backend Setup**:
    - cd backend
    - npm install
-   - Create a `.env` file with `OPENAI_API_KEY=your_key_here`
+   - Create a `.env` file with:
+     - `MONGODB_URI=your_mongodb_connection_string`
+     - `OPENAI_API_KEY=your_key_here`
    - npm start
 
 3. **Frontend Setup**:
@@ -37,6 +39,8 @@ An AI-powered tool to detect internship scams and find legitimate opportunities.
 
 - POST /api/analyze: Analyze text or PDF for scams
   - Body: `text` (string) or `file` (PDF upload)
+- GET /api/analyses: Return recent saved analyses from MongoDB
+- GET /api/insights: Return dashboard metrics based on MongoDB data
 
 ## Usage
 
